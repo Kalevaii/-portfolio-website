@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Cloister+Black&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Black Background */
+    color: #ffffff;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+h1, h2, h3 {
+    font-family: 'Cloister Black', serif;
+}
+
+/* Header */
+header {
+    background-color: #ffffff; /* White Background */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+header.scrolled {
+    background-color: #f0f0f0; /* Light Grey Background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #0A1A2A; /* Dark Blue Text */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s, background-color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e74c3c;
+    background-color: #f0f0f0;
+    border-radius: 0; /* Remove the rounded corners */
+    transform: scale(1.1);
+}
+
+
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000; /* Black Background */
+    position: relative;
+}
+
+.hero-content {
+    text-align: center;
+    margin-left: 10%;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid #ffffff;
+    width: 40ch; /* Adjust width to fit the text */
+    animation: typing 6s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #8A2BE2; /* Purple color */
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 40ch }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #ffffff }
+}
+
+.hero-image {
+    margin-right: 10%;
+}
+
+.frame {
+    border: 5px solid #0e0150;
+    padding: 5px;
+    display: inline-block;
+}
+
+.profile-pic-large {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50%; /* Make it circular */
+}
+
+/* Section Styling */
+section {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #000000;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#skills .skill-list, #skills .language-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+#skills .skill-list span, #skills .language-list span {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #000000;
+}
+/*about me section*/
+#about p {
+    font-size: 1.5rem; /* Adjust size as needed */
+    text-align: center;
+    line-height: 1.8; /* Optional: improve readability */
+    margin: 0 auto; /* Center the text block */
+    max-width: 800px; /* Optional: limit the width of the text */
+}
+
+/* Project Images */
+.project-img {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+#projects .project {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px; /* Optional: limit the width for better layout */
+}
+
+#projects .project h3 {
+    font-size: 1.8rem; /* Adjust heading size as needed */
+    margin-bottom: 10px;
+}
+
+#projects .project p {
+    font-size: 1.2rem; /* Adjust paragraph size as needed */
+    line-height: 1.6; /* Optional: improve readability */
+}
+
+#projects .project a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #8A2BE2; /* Purple for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#projects .project a:hover {
+    color: #e74c3c; /* Highlight color on hover */
+}
+
+#projects .project img {
+    margin-top: 15px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 2rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #e74c3c;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+}
