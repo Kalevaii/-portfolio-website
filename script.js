@@ -19,27 +19,6 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
         }
     });
 });
-// Smooth Scroll for Navigation Links
-document.querySelectorAll('nav ul li a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        if (this.getAttribute('href').endsWith('.pdf')) {
-            return; // Skip smooth scroll for PDF links
-        }
-
-        e.preventDefault();
-
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        const headerHeight = document.querySelector('header').offsetHeight;
-
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - headerHeight,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
 
 
 
