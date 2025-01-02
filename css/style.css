@@ -5,10 +5,11 @@ body {
     font-family: 'Georgia', serif;
     margin: 0;
     padding: 0;
-    background-color: #00008b; /* Black Background */
+    background-color: #00008b; /* Dark Blue Background */
     color: #ffffff;
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
+
 
 h1, h2, h3 {
     font-family: 'Cloister Black', serif;
