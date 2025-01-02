@@ -28,16 +28,11 @@ window.addEventListener('load', () => {
     heroContent.style.transform = 'translateY(0)'; // Reset transform to original position
 });
 
-// Scroll Animation (excluding hero section)
+// Scroll Animation
 const sections = document.querySelectorAll('section');
 
 window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY; // Get current scroll position
-
-    // Skip the hero section (it should always be visible)
-    if (document.querySelector('.hero')) {
-        return; // Hero section stays visible
-    }
 
     // Section fade-in animation
     sections.forEach(section => {
@@ -46,7 +41,7 @@ window.addEventListener('scroll', () => {
             section.classList.add('visible'); // Add visible class to fade in the section
         }
     });
-});;
+});
 
 // Navbar Scroll Animation
 window.addEventListener('scroll', () => {
