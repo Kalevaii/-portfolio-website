@@ -20,13 +20,7 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
     });
 });
 
-// Hero Animation
-const heroContent = document.querySelector('.hero-content');
-window.addEventListener('load', () => {
-    heroContent.style.transition = 'opacity 1s ease, transform 1s ease'; // Set transition effects
-    heroContent.style.opacity = 1; // Set opacity to visible
-    heroContent.style.transform = 'translateY(0)'; // Reset transform to original position
-});
+
 
 
 
