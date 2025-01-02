@@ -60,23 +60,18 @@ header.scrolled nav ul li a {
 
 
 /* Hero Section */
-/* Hero Section */
 .hero {
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: #00008b; /* Dark Blue Background */
-    opacity: 1; /* Ensure it's visible immediately */
-    transform: translateY(0); /* No sliding effect */
-    transition: none; /* Disable transition */
+    justify-content: space-between;
+    background-color: #000000; /* Black Background */
+    position: relative;
 }
 
 .hero-content {
     text-align: center;
-    opacity: 1; /* Ensure the content is visible */
-    transform: translateY(0); /* No sliding effect */
-    transition: none; /* Disable transition */
+    margin-left: 10%;
 }
 
 .hero-content h1 {
@@ -124,16 +119,18 @@ header.scrolled nav ul li a {
 
 /* Section Styling */
 section {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #000000;
     opacity: 0;
-    transform: translateY(50px); /* Invisible and off-screen initially */
+    transform: translateY(50px);
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 section.visible {
     opacity: 1;
-    transform: translateY(0); /* Fade in when visible */
+    transform: translateY(0);
 }
-
 
 #skills .skill-list, #skills .language-list {
     list-style: none;
