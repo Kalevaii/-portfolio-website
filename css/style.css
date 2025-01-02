@@ -29,7 +29,7 @@ header {
 }
 
 header.scrolled {
-    background-color: #8A2BE2; /* Black  Background */
+    background-color: #FF0000; /* Black  Background */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
