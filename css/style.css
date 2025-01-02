@@ -54,7 +54,9 @@ nav ul li a:hover {
     border-radius: 0; /* Remove the rounded corners */
     transform: scale(1.1);
 }
-
+header.scrolled nav ul li a {
+    color: #ffffff; /* White Text when scrolled */
+}
 
 
 /* Hero Section */
