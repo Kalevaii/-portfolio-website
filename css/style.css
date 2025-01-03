@@ -5,7 +5,7 @@ body {
     font-family: 'Georgia', serif;
     margin: 0;
     padding: 0;
-    background-color: #00008b; /* Dark Blue Background */
+    background-color: #787878; /* Dark Blue Background */
     color: #ffffff;
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
@@ -30,7 +30,7 @@ header {
 }
 
 header.scrolled {
-    background-color: #FF0000; /* Black  Background */
+    background-color: #787878; /* Black  Background */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -49,7 +49,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #e74c3c;
+    color: #1f302a;
     background-color: #f0f0f0;
     border-radius: 0; /* Remove the rounded corners */
     transform: scale(1.1);
@@ -61,17 +61,24 @@ header.scrolled nav ul li a {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    height: 100vh; /* Full viewport height */
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Keeps the content on the left and the image on the right */
     background-color: #000000; /* Black Background */
     position: relative;
+    z-index: 1; /* Ensure hero content is on top */
+}
+
+header {
+    z-index: 10; /* Keep the header above the hero */
 }
 
 .hero-content {
-    text-align: center;
-    margin-left: 10%;
+    text-align: left; /* Align text to the left */
+    margin-left: 5%; /* Adjust margin to control position of the text */
+    flex-grow: 1; /* Allow text to take up available space */
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .hero-content h1 {
@@ -90,6 +97,24 @@ header.scrolled nav ul li a {
     color: #8A2BE2; /* Purple color */
 }
 
+/* Profile picture */
+.hero-image {
+    position: fixed; /* Fix the image to the right */
+    right: 0; /* Align it to the right side */
+    top: 50%; /* Center the image vertically */
+    transform: translateY(-50%); /* Center the image exactly */
+    left: calc(100% - 400px - 8); /* Adjust the image 2cm to the left */
+}
+
+
+.profile-pic-large {
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 50%; /* Make it circular */
+}
+
+/* Typing animation */
 @keyframes typing {
     from { width: 0 }
     to { width: 40ch }
@@ -100,22 +125,6 @@ header.scrolled nav ul li a {
     50% { border-color: #ffffff }
 }
 
-.hero-image {
-    margin-right: 10%;
-}
-
-.frame {
-    border: 5px solid #0e0150;
-    padding: 5px;
-    display: inline-block;
-}
-
-.profile-pic-large {
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 50%; /* Make it circular */
-}
 
 /* Section Styling */
 section {
@@ -219,7 +228,7 @@ section.visible {
 /* Footer */
 footer {
     padding: 20px;
-    background-color: #FF0000;;
+    background-color:#787878;;
     color: #000000;
     text-align: center;
 }
