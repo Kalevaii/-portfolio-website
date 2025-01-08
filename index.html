@@ -18,20 +18,25 @@
           <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
           <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
           <li><a href="files/PranayaCV.pdf" target="_blank"><i class="fas fa-file-alt"></i> My CV</a></li>
-          
         </ul>
       </nav>
     </div>
   </header>
 
-  <section id="home" class="hero visible">
+  <section id="home" class="hero">
+    <!-- Video Background -->
+    <video autoplay loop muted class="hero-video">
+      <source src="videoplayback.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
     <div class="hero-content">
-      <h1>Hi, I am <span class="highlight">Pranaya Poudel</span>. <br>Welcome, this is my portfolio.</h1>
+      <h1>Hi, I am <span class="highlight">Pranaya Poudel</span></h1>
+      <h2>This is my Portfolio.</h2>
     </div>
+    
     <div class="hero-image">
-      
-        <img src="images/pranaya.jpg" alt="Pranaya Poudel" class="profile-pic-large">
-      </div>
+      <img src="images/pranaya.jpg" alt="Pranaya Poudel" class="profile-pic-large">
     </div>
   </section>
 
@@ -62,31 +67,58 @@
   <section id="projects">
     <h2>Projects</h2>
     <div class="project">
-      <h3>Supermarket Simulation</h3>
-      <p>simulation of operations in a supermarket and lets users browse aisles, buy products, control employees, and generate reports. Customer transaction record keeping, inventory handling, payroll processing, reporting generating and store functionality such as memberships are managed by the program.</p>
-      <a href="" target="_blank">GitHub Repository</a>
-      <img src="images/supermarket-simulation.jpg" alt="Supermarket Simulation" class="project-img">
+        <h3>Supermarket Simulation</h3>
+        <p>Simulation of operations in a supermarket and lets users browse aisles, buy products, control employees, and generate reports. Customer transaction record keeping, inventory handling, payroll processing, reporting generating, and store functionality such as memberships are managed by the program.</p>
+        <a href="https://github.com/your-repo-link" target="_blank">
+            <button class="learn-more-btn">Learn More</button>
+        </a>
+        <img src="images/supermarket-simulation.jpg" alt="Supermarket Simulation" class="project-img">
     </div>
+
     <div class="project">
-      <h3>Property Recommendation System</h3>
-      <p>Property Management System - GitHub Project Description 🏠 Property Management System The Property Management System is a Python-based application designed to simplify property management and recommendation tasks for real estate administrators and users It uses JSON files for data storage, making it lightweight and easy to set up without requiring a database.</p>
-      <a href="https://github.com/Kalevaii/Supermarket_simulations" target="_blank">GitHub Repository</a>
-      <img src="images/property-recommendation-system.jpg" alt="Property Recommendation System" class="project-img">
+        <h3>Property Recommendation System</h3>
+        <p>Property Management System - GitHub Project Description 🏠 Property Management System The Property Management System is a Python-based application designed to simplify property management and recommendation tasks for real estate administrators and users. It uses JSON files for data storage, making it lightweight and easy to set up without requiring a database.</p>
+        <a href="https://github.com/Kalevaii/Supermarket_simulations" target="_blank">
+            <button class="learn-more-btn">Learn More</button>
+        </a>
+        <img src="images/property-recommendation-system.jpg" alt="Property Recommendation System" class="project-img">
     </div>
+
   </section>
 
   <section id="contact">
     <h2>Contact Me</h2>
     <div class="contact-details">
-      <p>Email: <a href="mailto:your-email@example.com">pranayapoudel109@gmail.com</a></p>
+      <p>Email: <a href="mailto:pranayapoudel109@gmail.com">pranayapoudel109@gmail.com</a></p>
     </div>
+  
+    <!-- Contact Form -->
+    <div class="form-box">
+      <form action="sendmsg.php" method="POST" id="contactForm">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" required>
+  
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" required>
+  
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+  
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+  
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  
+    <!-- Social Media Icons -->
     <div class="social-icons">
       <a href="https://www.linkedin.com/in/pranaya-poudel-5442a8338/" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="https://github.com/Kalevaii" target="_blank"><i class="fab fa-github"></i></a>
       <a href="https://www.facebook.com/bfw.pranaya" target="_blank"><i class="fab fa-facebook"></i></a>
     </div>
   </section>
-
+  
   <footer>
     <p>“Nothing else Matters.”</p>
   </footer>

@@ -1,18 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Cloister+Black&display=swap');
 
+@font-face {
+    font-family: 'death-note';
+    src: url('fonts/death-note.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 /* General Styles */
 body {
-    font-family: 'Georgia', serif;
+    font-family: 'death-note', ;
     margin: 0;
     padding: 0;
-    background-color: #787878; /* Dark Blue Background */
+    background-color: #252424; /* Dark Blue Background */
     color: #ffffff;
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 
 h1, h2, h3 {
-    font-family: 'Cloister Black', serif;
+    font-family: 'death-note', ;
 }
 
 /* Header */
@@ -30,7 +35,7 @@ header {
 }
 
 header.scrolled {
-    background-color: #787878; /* Black  Background */
+    background-color: #252424; /* Black  Background */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -59,28 +64,47 @@ header.scrolled nav ul li a {
 }
 
 
+
 /* Hero Section */
 .hero {
     height: 100vh; /* Full viewport height */
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Keeps the content on the left and the image on the right */
+    justify-content: flex-start; /* Align content to the left */
     background-color: #000000; /* Black Background */
     position: relative;
     z-index: 1; /* Ensure hero content is on top */
+    padding: 80px 30px; /* Add padding around the content */
+    box-sizing: border-box; /* Ensure padding doesn't affect overall width */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    overflow: hidden; /* Prevent content overflow when video is used */
 }
 
-header {
-    z-index: 10; /* Keep the header above the hero */
+/* Video Background */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire section */
+    z-index: -1; /* Send the video behind the text */
 }
 
+/* Content within the hero */
 .hero-content {
     text-align: left; /* Align text to the left */
-    margin-left: 5%; /* Adjust margin to control position of the text */
+    margin-left: 10%; /* Adjust margin to control position of the text */
     flex-grow: 1; /* Allow text to take up available space */
     white-space: nowrap; /* Prevent text from wrapping */
+    padding: 20px 30px; /* Add padding inside the hero content box */
+    background-color: rgba(0, 0, 0, 0.6); /* Optional: Add a semi-transparent background for the content */
+    border-radius: 10px; /* Rounded corners for the content box */
+    z-index: 2; /* Ensure the content is above the video */
 }
 
+
+/* Heading inside the hero */
 .hero-content h1 {
     font-size: 3rem;
     color: #ffffff;
@@ -97,34 +121,49 @@ header {
     color: #8A2BE2; /* Purple color */
 }
 
-/* Profile picture */
-.hero-image {
-    position: fixed; /* Fix the image to the right */
-    right: 0; /* Align it to the right side */
-    top: 50%; /* Center the image vertically */
-    transform: translateY(-50%); /* Center the image exactly */
-    left: calc(100% - 400px - 8); /* Adjust the image 2cm to the left */
+.hero-content h2 {
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid #ffffff;
+    width: 40ch; /* Adjust width to fit the text */
+    animation: typing 6s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
 }
 
+
+
+
+/* Profile picture */
+.hero-image {
+    position: relative;
+    right: 0; /* Align it to the right side */
+    top: 57%; /* Center the image vertically */
+    transform: translateY(-50%); /* Center the image exactly */
+    padding-left: 20px; /* Add space on the left side of the image */
+}
 
 .profile-pic-large {
     width: 600px;
     height: 600px;
     object-fit: cover;
     border-radius: 50%; /* Make it circular */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Add shadow around the image */
+    border: 4px solid #ffffff; /* Add a white border around the image */
 }
 
 /* Typing animation */
 @keyframes typing {
     from { width: 0 }
-    to { width: 40ch }
+    to { width: 30ch } /* Set width to fit your name */
 }
 
 @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #ffffff }
+    0% { border-color: transparent; }
+    50% { border-color: transparent; content: " < > "; }
+    100% { border-color: transparent; }
 }
-
 
 /* Section Styling */
 section {
@@ -155,16 +194,113 @@ section.visible {
     border-radius: 5px;
     color: #000000;
 }
-/*about me section*/
-#about p {
-    font-size: 1.5rem; /* Adjust size as needed */
-    text-align: center;
-    line-height: 1.8; /* Optional: improve readability */
-    margin: 0 auto; /* Center the text block */
-    max-width: 800px; /* Optional: limit the width of the text */
+/* About Me Section */
+#about {
+    background-color: #1a1a1a; /* Dark background for contrast */
+    padding: 60px 30px; /* Increase padding for more space */
+    font-size: 2rem;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px auto; /* Center the section */
+    max-width: 900px; /* Limit the section width */
 }
 
+#about p {
+    font-size: 2rem; /* Larger font size for description */
+    text-align: center; /* Center the text */
+    line-height: 1.8; /* Line spacing for readability */
+    margin: 0 auto;
+    max-width: 800px; /* Limit the width for better control */
+    padding: 20px; /* Padding inside the text box */
+    background-color: #333333; /* Slightly lighter background inside the box */
+    border-radius: 8px; /* Rounded corners for the text box */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Shadow for the text box */
+    font-weight: 400; /* Make the text more readable with normal weight */
+    letter-spacing: 0.5px; /* Add slight spacing for better text appearance */
+}
+
+
+
+
+/* Skills Section */
+#skills {
+    background-color: #1a1a1a; /* Dark background for contrast */
+    padding: 60px 30px; /* Increased padding for more space */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 900px; /* Limit the section width */
+    margin-bottom: 80px; 
+    font-size: 2rem;
+}
+
+/* Skill list items */
+#skills .skill-list, #skills .language-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+#skills .skill-list span, #skills .language-list span {
+    background-color: #ffffff;
+    padding: 15px 30px; /* Add more padding for spacing */
+    border-radius: 5px;
+    color: #000000;
+    font-size: 1.5rem; /* Increase font size */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Shadow for individual skill/language items */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for skill/language items */
+#skills .skill-list span:hover, #skills .language-list span:hover {
+    transform: scale(1.05);
+    background-color: #8A2BE2; /* Purple on hover */
+    color: #ffffff; /* White text on hover */
+}
+
+/* Languages Section */
+#languages {
+    background-color: #1a1a1a;
+    padding: 60px 30px; /* Increased padding for more space */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px auto; /* Center the section */
+    max-width: 900px; /* Limit the section width */
+    margin-top: 80px; 
+}
+
+/* Language list items */
+#languages .language-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+#languages .language-list span {
+    background-color: #ffffff;
+    padding: 15px 30px; /* Add more padding for spacing */
+    border-radius: 5px;
+    color: #000000;
+    font-size: 1.5rem; /* Increase font size */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Shadow for individual language items */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for language items */
+#languages .language-list span:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    background-color: #8A2BE2; /* Purple on hover */
+    color: #ffffff; /* White text on hover */
+}
+
+
+
 /* Project Images */
+
 .project-img {
     width: 100%;
     height: auto;
@@ -173,8 +309,17 @@ section.visible {
 }
 #projects .project {
     text-align: center;
-    margin: 0 auto;
-    max-width: 800px; /* Optional: limit the width for better layout */
+    margin: 20px auto; /* Add spacing around each project */
+    max-width: 800px; /* Limit width for better layout */
+    background-color: #1a1a1a; /* Slightly lighter black for contrast */
+    padding: 20px; /* Add padding inside the project box */
+    border-radius: 10px; /* Rounded corners for a smooth look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation on hover */
+}
+#projects .project:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
 #projects .project h3 {
@@ -184,7 +329,7 @@ section.visible {
 
 #projects .project p {
     font-size: 1.2rem; /* Adjust paragraph size as needed */
-    line-height: 1.6; /* Optional: improve readability */
+    line-height: 1s.6; /* Optional: improve readability */
 }
 
 #projects .project a {
@@ -206,6 +351,78 @@ section.visible {
     height: auto;
     border-radius: 10px; /* Rounded corners for images */
 }
+/* Button Styling */
+.learn-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: #8A2BE2; /* Purple button */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer; /* Changes cursor to pointer */
+}
+
+.learn-more-btn:hover {
+    background-color: #e74c3c; /* Change color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/*contact form*/
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 20px; /* Increased space between form elements */
+    width: 100%;
+    max-width: 600px; /* Limit form width */
+    margin: 0 auto;
+    padding: 20px; /* Add padding around the form */
+    background-color: #050505; /* Light background color */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+#contactForm label {
+    font-size: 16px;
+    margin-bottom: 8px; /* Increased margin for better spacing */
+    font-weight: bold; /* Make the label bold for better readability */
+}
+
+#contactForm input, #contactForm textarea {
+    width: 100%;
+    padding: 12px; /* Increased padding for better input field height */
+    margin-bottom: 15px; /* Space below each input field */
+    border: 1px solid #090909;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+#contactForm textarea {
+    resize: vertical; /* Allow the textarea to be resizable vertically */
+    min-height: 150px; /* Set a minimum height for the textarea */
+}
+
+#contactForm button {
+    padding: 12px 20px; /* Increased padding for a larger button */
+    background-color: #007bff;
+    color: rgb(11, 11, 11);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#contactForm button:hover {
+    background-color: #0056b3;
+}
+
+
 
 
 /* Social Icons */
@@ -228,7 +445,8 @@ section.visible {
 /* Footer */
 footer {
     padding: 20px;
-    background-color:#787878;;
-    color: #000000;
+    background-color:#252424;
+    color: #fdf7f7;
     text-align: center;
+   
 }
