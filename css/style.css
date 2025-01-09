@@ -371,56 +371,8 @@ section.visible {
     transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
-/*contact form*/
-#contactForm {
-    display: flex;
-    flex-direction: column;
-    
-    gap: 20px; /* Increased space between form elements */
-    width: 100%;
-    max-width: 600px; /* Limit form width */
-    margin: 0 auto;
-    padding: 20px; /* Add padding around the form */
-    background-color: #050505; /* Light background color */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-}
 
-#contactForm label {
-    font-size: 16px;
-    margin-bottom: 8px; /* Increased margin for better spacing */
-    font-weight: bold; /* Make the label bold for better readability */
-}
 
-#contactForm input, #contactForm textarea {
-    width: 100%;
-    padding: 12px; /* Increased padding for better input field height */
-    margin-bottom: 15px; /* Space below each input field */
-    border: 1px solid #090909;
-    border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box; /* Ensure padding doesn't affect width */
-}
-
-#contactForm textarea {
-    resize: vertical; /* Allow the textarea to be resizable vertically */
-    min-height: 150px; /* Set a minimum height for the textarea */
-}
-
-#contactForm button {
-    padding: 12px 20px; /* Increased padding for a larger button */
-    background-color: #007bff;
-    color: rgb(11, 11, 11);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-#contactForm button:hover {
-    background-color: #0056b3;
-}
 
 
 
