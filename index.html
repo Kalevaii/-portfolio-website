@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Pranaya Poudel</title>
+    <link rel="icon" type="image/png" href="images/pranaya.jpg">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+</head>
+<body>
+
+    <canvas id="matrixCanvas"></canvas>
+    <script src="javascript/matrix.js"></script>
+
+    <header class="header">
+        <a href="#" class="logo">{Portfolio} </a>
+
+        <nav class="navbar">
+            <a href="#home" style="--i:1;" class="active">Home</a>
+            <a href="#about" style="--i:2;">About</a>
+            <a href="#skills" style="--i:3;">Skills</a>
+            <a href="#projects" style="--i:4;">Projects</a>
+            <a href="#contact" style="--i:5;">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="home">
+        <div class="home-content">
+            <h3 class="mu">Hello, It's me</h3>
+            <h1>Pranaya Poudel</h1>
+            <h3>And I'm a <span class="pro-text"></span></h3>
+            <script>
+               var typed = new Typed(".pro-text", {
+                  strings: [
+                    "AI Enthusiast",
+                    "Full-Stack Developer",
+                    "Machine Learning Student",
+                    "Cloud Computing Learner",
+                    "Problem Solver"
+                  ],
+                  typeSpeed: 100,   
+                  backSpeed: 100,   
+                  backDelay: 1000,  
+                  loop: true        
+                });
+            </script>
+            
+                </script>
+            </span></h3>
+            
+          
+
+            <div class="home-sci">
+                <a href="https://github.com/Kalevaii" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/pranaya-poudel-5442a8338/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://www.facebook.com/bfw.pranaya" target="_blank"><i class='bx bxl-facebook'></i></a>
+            </div>
+           <a href="files/PranayaCV.pdf" class="btn-box" download="Pranaya_CV">Download CV</a>
+        </div>
+
+        <div class="home-img">
+            <div class="glowing-circle">
+                <span></span>
+                <span></span>
+                <div class="image">
+                    <img src="images/pranaya.jpg" alt="Pranaya Poudel">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am Pranaya Poudel, an AI and cloud computing enthusiast with a strong foundation in **Python, C++, and Web Development**. I enjoy **building AI-powered applications** and exploring the intersection of **technology and business**.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Problem Solving</h3>
+                <p>Strong problem-solving skills with a focus on **algorithms and data structures**.</p>
+            </div>
+            <div class="skill-card">
+                <h3>AI & Machine Learning</h3>
+                <p>Basic understanding of **AI models, Python libraries (NumPy, Pandas, Matplotlib)**.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Web Development</h3>
+                <p>Experience in **HTML, CSS, JavaScript, and React** for **building modern web applications**.</p>
+            </div>
+        
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                
+                <h3>Supermarket Simulation</h3>
+                <p>A **simulation of supermarket operations** with **inventory management and reporting**.</p>
+                <a href="https://github.com/Kalevaii/Supermarket_simulations" target="_blank" class="btn">Learn More</a>
+            </div>
+            <div class="project-card">
+                
+                <h3>Property Recommendation System</h3>
+                <p>A **Python-based system for property management and recommendations**.</p>
+                <a href="https://github.com/Kalevaii" target="_blank" class="btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-details">
+            <p>Email: <a href="mailto:pranayapoudel109@gmail.com">pranayapoudel109@gmail.com</a></p>
+     
+    </section>
+
+    <footer>
+        <p>“Copyright © 2025 Pranaya Poudel”</p>
+    </footer>
+
+</body> 
+</html>
