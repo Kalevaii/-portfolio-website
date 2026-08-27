@@ -2,129 +2,177 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Pranaya Poudel</title>
-    <link rel="icon" type="image/png" href="images/pranaya.jpg">
-
+    <title>Pranaya Poudel | Portfolio</title>
+    <link rel="icon" type="image/png" href="assets/images/pranaya.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-
 </head>
 <body>
-
     <canvas id="matrixCanvas"></canvas>
-    <script src="javascript/matrix.js"></script>
+    <div class="cursor-glow"></div>
 
-    <header class="header">
-        <a href="#" class="logo">{Portfolio} </a>
+    <header class="header" id="header">
+        <a href="#home" class="logo">Pranaya</a>
 
-        <nav class="navbar">
-            <a href="#home" style="--i:1;" class="active">Home</a>
-            <a href="#about" style="--i:2;">About</a>
-            <a href="#skills" style="--i:3;">Skills</a>
-            <a href="#projects" style="--i:4;">Projects</a>
-            <a href="#contact" style="--i:5;">Contact</a>
+        <nav class="navbar" id="navbar">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
         </nav>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+            <i class='bx bx-menu'></i>
+        </button>
     </header>
 
-    <section id="home" class="home">
-        <div class="home-content">
-            <h3 class="mu">Hello, It's me</h3>
-            <h1>Pranaya Poudel</h1>
-            <h3>And I'm a <span class="pro-text"></span></h3>
-            <script>
-               var typed = new Typed(".pro-text", {
-                  strings: [
-                    "AI Enthusiast",
-                
-                    "Machine Learning Student",
-                    "Cloud Computing Learner",
-                    "Problem Solver"
-                  ],
-                  typeSpeed: 100,   
-                  backSpeed: 100,   
-                  backDelay: 1000,  
-                  loop: true        
-                });
-            </script>
-            
-                </script>
-            </span></h3>
-            
-          
+    <main>
+        <section id="home" class="home section">
+            <div class="home-content reveal">
+                <span class="eyebrow">Computer Science Student</span>
+                <h1>Pranaya Poudel</h1>
+                <h2>I build <span class="pro-text"></span></h2>
+                <p>
+                    I focus on AI, scalable web applications, and high performance systems.
+                    I love building projects that solve real problems and strengthen my engineering skills.
+                </p>
 
-            <div class="home-sci">
-                <a href="https://github.com/Kalevaii" target="_blank"><i class='bx bxl-github'></i></a>
-                <a href="https://www.linkedin.com/in/pranaya-poudel-5442a8338/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://www.facebook.com/bfw.pranaya" target="_blank"><i class='bx bxl-facebook'></i></a>
-            </div>
-           <a href="files/PranayaCV.pdf" class="btn-box" download="Pranaya_CV">Download CV</a>
-        </div>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="files/PranayaCV.pdf" class="btn btn-secondary" download>Download CV</a>
+                </div>
 
-        <div class="home-img">
-            <div class="glowing-circle">
-                <span></span>
-                <span></span>
-                <div class="image">
-                    <img src="images/pranaya.jpg" alt="Pranaya Poudel">
+                <div class="home-sci">
+                    <a href="https://github.com/Kalevaii" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/in/pranaya-poudel-5442a8338/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://www.facebook.com/bfw.pranaya" target="_blank" rel="noopener noreferrer"><i class='bx bxl-facebook'></i></a>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am Pranaya Poudel, an AI and cloud computing enthusiast with a strong foundation in **Python, C++, and Web Development**. I enjoy **building AI-powered applications** and exploring the intersection of **technology and business**.</p>
-    </section>
+            <div class="home-img reveal reveal-delay">
+                <div class="image-ring">
+                    <img src="assets/images/pranaya.jpg" alt="Pranaya Poudel">
+                </div>
+            </div>
+        </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>Problem Solving</h3>
-                <p>Strong problem-solving skills with a focus on **algorithms and data structures**.</p>
+        <section id="about" class="section">
+            <div class="section-heading reveal">
+                <span class="section-tag">About</span>
+                <h2>About Me</h2>
             </div>
-            <div class="skill-card">
-                <h3>AI & Machine Learning</h3>
-                <p>Basic understanding of **AI models, Python libraries (NumPy, Pandas, Matplotlib)**.</p>
-            </div>
-            <div class="skill-card">
-                <h3>Web Development</h3>
-                <p>Experience in **HTML, CSS, JavaScript, and React** for **building modern web applications**.</p>
-            </div>
-        
-    </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                
-                <h3>Supermarket Simulation</h3>
-                <p>A **simulation of supermarket operations** with **inventory management and reporting**.</p>
-                <a href="https://github.com/Kalevaii/Supermarket_simulations" target="_blank" class="btn">Learn More</a>
+            <div class="about-card reveal reveal-delay">
+                <p>
+                    I am Pranaya Poudel, an AI and cloud computing enthusiast with a strong foundation in
+                    Python, C++, web development, and problem solving. I enjoy creating intelligent systems,
+                    modern user experiences, and projects that connect software with real-world impact.
+                </p>
             </div>
-            <div class="project-card">
-                
-                <h3>Property Recommendation System</h3>
-                <p>A **Python-based system for property management and recommendations**.</p>
-                <a href="https://github.com/Kalevaii" target="_blank" class="btn">Learn More</a>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="section-heading reveal">
+                <span class="section-tag">Skills</span>
+                <h2>Tech Stack</h2>
             </div>
-        </div>
-    </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <div class="contact-details">
-            <p>Email: <a href="mailto:pranayapoudel109@gmail.com">pranayapoudel109@gmail.com</a></p>
-     
-    </section>
+            <div class="skills-grid">
+                <div class="skill-card reveal">
+                    <h3>Programming</h3>
+                    <p>Python, C++, JavaScript</p>
+                </div>
 
-    <footer>
-        <p>“Copyright © 2025 Pranaya Poudel”</p>
+                <div class="skill-card reveal reveal-delay-1">
+                    <h3>Web</h3>
+                    <p>HTML, CSS, Responsive UI, Frontend Development</p>
+                </div>
+
+                <div class="skill-card reveal reveal-delay-2">
+                    <h3>AI Tools</h3>
+                    <p>NumPy, Pandas, Matplotlib, ML Fundamentals</p>
+                </div>
+
+                <div class="skill-card reveal">
+                    <h3>Cloud</h3>
+                    <p>Cloud Computing Concepts, Deployment Basics</p>
+                </div>
+
+                <div class="skill-card reveal reveal-delay-1">
+                    <h3>CS Core</h3>
+                    <p>Data Structures, Algorithms, Problem Solving</p>
+                </div>
+
+                <div class="skill-card reveal reveal-delay-2">
+                    <h3>Tools</h3>
+                    <p>Git, GitHub, VS Code, CLion</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="section-heading reveal">
+                <span class="section-tag">Projects</span>
+                <h2>Featured Work</h2>
+            </div>
+
+            <div class="projects-grid">
+                <article class="project-card reveal">
+                    <div class="project-top">
+                        <span class="project-badge">Simulation</span>
+                        <i class='bx bx-store-alt project-icon'></i>
+                    </div>
+                    <h3>Library Inventory Validator</h3>
+                    <p>
+                        A Python tool that audits library inventory batches for metadata quality, barcode validity, 
+                        and RFID tag format — built to demonstrate skills in cataloging, metadata management, and data quality assurance.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://libraryvalidator-4dv3ye5scppuyyypkqfwuw.streamlit.app/" target="_blank" rel="noopener noreferrer">Link</a>
+                    </div>
+                </article>
+
+                <article class="project-card reveal reveal-delay-1">
+                    <div class="project-top">
+                        <span class="project-badge">Recommendation</span>
+                        <i class='bx bx-buildings project-icon'></i>
+                    </div>
+                    <h3>Property Recommendation System</h3>
+                    <p>
+                        A Python-based recommendation project for property management and matching user
+                        preferences with relevant results.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/Kalevaii" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="section-heading reveal">
+                <span class="section-tag">Contact</span>
+                <h2>Let’s Connect</h2>
+            </div>
+
+            <div class="contact-card reveal reveal-delay">
+                <p>Have an opportunity, project, or collaboration in mind?</p>
+                <a href="mailto:pranayapoudel109@gmail.com" class="contact-email">pranayapoudel109@gmail.com</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Pranaya Poudel</p>
     </footer>
 
-</body> 
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="js/matrix.js"></script>
+    <script src="js/script.js"></script>
+</body>
 </html>
